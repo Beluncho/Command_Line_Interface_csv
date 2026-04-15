@@ -9,8 +9,8 @@ class ClickbaitReport:
         """
         result = []
         for video in videos:
-            click_rate = float(video['click_rate'])
-            watch_rate = float(video['watch_rate'])
+            click_rate = float(video['ctr'])
+            watch_rate = float(video['retention_rate'])
 
             if click_rate > 15 and watch_rate < 40:
                 result.append(video)
@@ -26,7 +26,7 @@ class ClickbaitReport:
 
         items = []
         for video in videos:
-            click_rate = float(video['click_rate'])
+            click_rate = float(video['ctr'])
             items.append((click_rate, video))
 
         items.sort(reverse=True)
@@ -41,7 +41,7 @@ class ClickbaitReport:
         """
         :return: Какие колонки показывать в итоговой таблице
         """
-        return ['title', 'click_rate', 'watch_rate']
+        return ['title', 'ctr', 'retention_rate']
 
 
 """
