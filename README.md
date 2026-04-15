@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python main.py --files stats1.csv --report clickbait
 
 # Запуск (несколько файлов)
-python main.py --files stats1.csv stats2.csv --report clickbait
+python main.py --files csv/stats1.csv csv/stats2.csv --report clickbait
 ```
 ## 📊 Пример вывода
 ```
