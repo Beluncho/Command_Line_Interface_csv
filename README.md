@@ -1,10 +1,8 @@
-# Command_Line_Interface_csv
-CLI приложение для обработки name.csv-файлов с метриками
-
-
-# 📊 Report CLI — анализ метрик YouTube-видео
-
-CLI-утилита для анализа CSV-файлов с метриками видео. Отбирает кликбейтные видео (кликабельность > 15%, удержание < 40%) и выводит таблицу.
+# 📊 Command_Line_Interface_csv
+```
+CLI приложение для обработки name.csv-файлов с метриками видео.
+Отбирает кликбейтные видео (кликабельность > 15%, удержание < 40%) и выводит таблицу.
+```
 
 ## 🚀 Запуск
 ```
@@ -12,7 +10,7 @@ CLI-утилита для анализа CSV-файлов с метриками 
 pip install -r requirements.txt
 
 # Запуск (один файл)
-python main.py --files stats1.csv --report clickbait
+python main.py --files csv/stats1.csv --report clickbait
 
 # Запуск (несколько файлов)
 python main.py --files csv/stats1.csv csv/stats2.csv --report clickbait
@@ -50,6 +48,29 @@ pytest tests/ -v
 
 Добавить класс в словарь REPORTS
 ```
+# 📁 СТРУКТУРА ПРОЕКТА
+```text
+Command_line_Interface_csv
+│
+├── report_cli/    
+│   ├── main.py 
+│   ├── readers.py
+│   ├── reports.py
+│   │
+│   ├── csv/ 
+│   │   ├── stats1.csv
+│   │   └── stats2.csv
+│   │
+│   └── tests/       
+│       ├── test_readers.py
+│       ├── test_reports.py
+│       └── __init__.py
+│
+├── venv/ 
+├── requirements.txt  
+└── README.md
+```
+
 ```text
 Файл	                Что делает
 main.py	                Главный файл, обрабатывает аргументы, выводит таблицу
