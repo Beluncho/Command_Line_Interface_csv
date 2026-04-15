@@ -74,9 +74,9 @@ Command_line_Interface_csv
 ```text
 Файл	                Что делает
 main.py	                Главный файл, обрабатывает аргументы, выводит таблицу
-readers.py	        Читает CSV-файлы
-reports.py	        Логика отбора и сортировки
+readers.py	            Читает CSV-файлы
+reports.py	            Логика отбора и сортировки
 tests/	                Тесты на pytest
-requirements.txt	Зависимости
-README.md	        Инструкция 
+requirements.txt	    Зависимости
+README.md	            Инструкция 
 ```
